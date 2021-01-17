@@ -59,7 +59,7 @@ Reference the [`ExcelDnaPack`](https://www.nuget.org/packages/ExcelDnaPack/) NuG
 e.g.:
 
 ```csharp
-#tool "nuget:?package=ExcelDnaPack&version=1.0.0"
+#tool "nuget:?package=ExcelDnaPack&version=1.1.1"
 
 var excelDnaPackExePath = Context.Tools.Resolve("ExcelDnaPack.exe");
 
@@ -92,4 +92,4 @@ _Copyright &copy; 2021 Excel-DNA Contributors - Provided under the [Apache Licen
 
 ---
 
-_The ExcelDnaPack tool is Copyright &copy; 2005-2019 Govert van Drimmelen - Provided under the [zLib license](https://opensource.org/licenses/Zlib). See file LICENSE.txt included in the NuGet package._
+_The ExcelDnaPack tool is Copyright &copy; 2005-2021 Govert van Drimmelen - Provided under the [zLib license](https://opensource.org/licenses/Zlib). See file LICENSE.txt included in the NuGet package._

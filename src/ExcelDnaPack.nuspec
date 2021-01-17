@@ -22,7 +22,6 @@
 
       https://github.com/augustoproiete/ExcelDnaPack-NuGet/releases/tag/v{ExcelDnaPackVersion}
 
-      ```
       - ExcelDnaPack.exe
         - MD5 hash: `{ExcelDnaPackExeMd5Hash}`
         - SHA256 hash: `{ExcelDnaPackExeSha256Hash}`
@@ -32,7 +31,6 @@
         - MD5 hash: `{ExcelDnaIntegrationDllMd5Hash}`
         - SHA256 hash: `{ExcelDnaIntegrationDllSha256Hash}`
         - SHA512 hash: `{ExcelDnaIntegrationDllSha512Hash}`
-      ```
     </releaseNotes>
     <language>en-US</language>
     <tags>excel-dna exceldnapack tool pack exceldna</tags>
