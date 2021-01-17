@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>ExcelDnaPack</id>
+    <version>0.0.1-local</version>
+    <authors>Excel-DNA Contributors</authors>
+    <owners>augustoproiete</owners>
+    <license type="expression">Apache-2.0</license>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <copyright>Copyright (c) 2005-{CopyrightYear} Excel-DNA Contributors</copyright>
+    <projectUrl>https://github.com/augustoproiete/ExcelDnaPack-NuGet</projectUrl>
+    <repository type="git" url="https://github.com/augustoproiete/ExcelDnaPack-NuGet.git" />
+    <icon>images\icon.png</icon>
+    <iconUrl>https://raw.githubusercontent.com/augustoproiete/ExcelDnaPack-NuGet/master/asset/exceldnapack-nuget.png</iconUrl>
+    <title>ExcelDnaPack</title>
+    <summary>ExcelDnaPack distributed as a NuGet package for use as a tool in build scenarios.</summary>
+    <description>
+      ExcelDnaPack distributed as a NuGet package for use as a tool in build scenarios.
+    </description>
+    <releaseNotes>
+      This package contains the ExcelDnaPack pack tool included in ExcelDna.AddIn v{ExcelDnaPackVersion}.
+
+      https://github.com/augustoproiete/ExcelDnaPack-NuGet/releases/tag/v{ExcelDnaPackVersion}
+
+      ```
+      - ExcelDnaPack.exe
+        - MD5 hash: `{ExcelDnaPackExeMd5Hash}`
+        - SHA256 hash: `{ExcelDnaPackExeSha256Hash}`
+        - SHA512 hash: `{ExcelDnaPackExeSha512Hash}`
+
+      - ExcelDna.Integration.dll
+        - MD5 hash: `{ExcelDnaIntegrationDllMd5Hash}`
+        - SHA256 hash: `{ExcelDnaIntegrationDllSha256Hash}`
+        - SHA512 hash: `{ExcelDnaIntegrationDllSha512Hash}`
+      ```
+    </releaseNotes>
+    <language>en-US</language>
+    <tags>excel-dna exceldnapack tool pack exceldna</tags>
+  </metadata>
+  <files>
+    <file src=".\tools\ExcelDnaPack.exe" target="tools\" />
+    <file src=".\tools\ExcelDna.Integration.dll" target="tools\" />
+    <file src="..\..\..\asset\exceldnapack-nuget.png" target="images\icon.png" />
+  </files>
+</package>
