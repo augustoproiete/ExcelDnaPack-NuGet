@@ -31,9 +31,11 @@ ExcelDnaPack is a command-line utility to pack ExcelDna add-ins into a single .x
 ```
 Usage: ExcelDnaPack.exe dnaPath [/O outputPath] [/Y]
 
-  dnaPath      The path to the primary .dna file for the ExcelDna add-in.
-  /Y           If the output .xll exists, overwrite without prompting.
-  /O outPath   Output path - default is <dnaPath>-packed.xll.
+  dnaPath           The path to the primary .dna file for the ExcelDna add-in.
+  /Y                If the output .xll exists, overwrite without prompting.
+  /NoCompression    no compress (LZMA) of resources
+  /NoMultiThreading no multi threading to ensure deterministic packing order
+  /O outPath        Output path - default is <dnaPath>-packed.xll.
 
 Example: ExcelDnaPack.exe MyAddins\FirstAddin.dna
                  The packed add-in file will be created as MyAddins\FirstAddin-packed.xll.
@@ -57,7 +59,7 @@ Reference the [`ExcelDnaPack`](https://www.nuget.org/packages/ExcelDnaPack/) NuG
 e.g.:
 
 ```csharp
-#tool "nuget:?package=ExcelDnaPack&version=0.33.9"
+#tool "nuget:?package=ExcelDnaPack&version=0.34.6"
 
 var excelDnaPackExePath = Context.Tools.Resolve("ExcelDnaPack.exe");
 
@@ -90,4 +92,4 @@ _Copyright &copy; 2021 Excel-DNA Contributors - Provided under the [Apache Licen
 
 ---
 
-_The ExcelDnaPack tool is Copyright &copy; 2005-2015 Govert van Drimmelen - Provided under the [zLib license](https://opensource.org/licenses/Zlib). See file LICENSE.txt included in the NuGet package._
+_The ExcelDnaPack tool is Copyright &copy; 2005-2017 Govert van Drimmelen - Provided under the [zLib license](https://opensource.org/licenses/Zlib). See file LICENSE.txt included in the NuGet package._

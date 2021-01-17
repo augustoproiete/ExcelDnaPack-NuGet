@@ -39,6 +39,7 @@
   </metadata>
   <files>
     <file src=".\tools\ExcelDnaPack.exe" target="tools\" />
+    <file src=".\tools\ExcelDnaPack.exe.config" target="tools\" />
     <file src=".\tools\ExcelDna.Integration.dll" target="tools\" />
     <file src="..\..\..\asset\exceldnapack-nuget.png" target="images\icon.png" />
   </files>
