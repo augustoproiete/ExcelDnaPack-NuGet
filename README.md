@@ -54,33 +54,26 @@ Other assemblies are packed if marked with Pack="true" in the .dna file.
 
 ## Using ExcelDnaPack with Cake Build
 
-Reference the [`ExcelDnaPack`](https://www.nuget.org/packages/ExcelDnaPack/) NuGet package as a [Cake](https://cakebuild.net) `#tool`, locate the `ExcelDnaPack` executable, and run it with the arguments documented in the [usage](https://github.com/augustoproiete/ExcelDnaPack-NuGet#exceldnapack-usage) section.
+Use the [Cake.ExcelDnaPack](https://github.com/augustoproiete/Cake.ExcelDnaPack/) addin for the [Cake](https://cakebuild.net) build automation system that enables you to use ExcelDnaPack for packing Excel-DNA addins into a single .xll file. [Cake.ExcelDnaPack](https://github.com/augustoproiete/Cake.ExcelDnaPack/) targets .NET 5.0, .NET Standard 2.0 and .NET Framework 4.6.1, and runs on Windows.
 
-e.g.:
+e.g.
 
 ```csharp
 #tool "nuget:?package=ExcelDnaPack&version=1.1.1"
+#addin "nuget:?package=Cake.ExcelDnaPack&version=0.1.0"
 
-var excelDnaPackExePath = Context.Tools.Resolve("ExcelDnaPack.exe");
-
-var settings = new ProcessSettings()
-    .WithArguments(args => args
-        .AppendQuoted(@"MyAddins\FirstAddin.dna")
-        .Append("/Y")
-        .Append("/O")
-        .AppendQuoted(@"MyAddins\FirstAddin-packed.xll")
-    );
-
-var exitCode = -1;
-using (var process = StartAndReturnProcess(excelDnaPackExePath, settings))
+Task("Pack")
+    .Does(context =>
 {
-    process.WaitForExit();
-    exitCode = process.GetExitCode();
-}
+    ExcelDnaPack(@"MyAddins\FirstAddin.dna");
+});
 
-Information("Exit code: {0}", exitCode);
-// ...
+RunTarget("Pack");
 ```
+
+_Make sure the `&version=` attribute references the latest versions of [ExcelDnaPack](https://www.nuget.org/packages/ExcelDnaPack/) and [Cake.ExcelDnaPack](https://www.nuget.org/packages/Cake.ExcelDnaPack/) available on nuget.org_.
+
+For more details on how `Cake.ExcelDnaPack` works, check its [documentation](https://github.com/augustoproiete/Cake.ExcelDnaPack).
 
 ## Release History
 
