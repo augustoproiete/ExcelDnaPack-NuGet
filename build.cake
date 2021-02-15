@@ -1,10 +1,12 @@
 #tool "nuget:?package=NuGet.CommandLine&version=5.8.1"
+
 #addin "nuget:?package=Cake.MinVer&version=1.0.0"
+#addin "nuget:?package=Cake.Args&version=1.0.0"
 
 using System.Net.Http;
 
-var target          = Argument<string>("target", "pack");
-var buildVersion    = MinVer(s => s.WithTagPrefix("v").WithDefaultPreReleasePhase("preview"));
+var target       = ArgumentOrDefault<string>("target") ?? "pack";
+var buildVersion = MinVer(s => s.WithTagPrefix("v").WithDefaultPreReleasePhase("preview"));
 
 var excelDnaPackageId = "ExcelDna.AddIn";
 var excelDnaPackageVersion = "1.1.1";
