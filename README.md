@@ -60,7 +60,7 @@ e.g.
 
 ```csharp
 #tool "nuget:?package=ExcelDnaPack&version=1.1.1"
-#addin "nuget:?package=Cake.ExcelDnaPack&version=0.1.0"
+#addin "nuget:?package=Cake.ExcelDnaPack&version=1.0.0"
 
 Task("Pack")
     .Does(context =>
