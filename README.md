@@ -54,7 +54,7 @@ Other assemblies are packed if marked with Pack="true" in the .dna file.
 
 ## Using ExcelDnaPack with Cake Build
 
-Use the [Cake.ExcelDnaPack](https://github.com/augustoproiete/Cake.ExcelDnaPack/) addin for the [Cake](https://cakebuild.net) build automation system that enables you to use ExcelDnaPack for packing Excel-DNA addins into a single .xll file. [Cake.ExcelDnaPack](https://github.com/augustoproiete/Cake.ExcelDnaPack/) targets .NET 5.0, .NET Standard 2.0 and .NET Framework 4.6.1, and runs on Windows.
+Use the [Cake.ExcelDnaPack](https://github.com/cake-contrib/Cake.ExcelDnaPack/) addin for the [Cake](https://cakebuild.net) build automation system that enables you to use ExcelDnaPack for packing Excel-DNA addins into a single .xll file. [Cake.ExcelDnaPack](https://github.com/cake-contrib/Cake.ExcelDnaPack/) targets .NET 5.0, .NET Standard 2.0 and .NET Framework 4.6.1, and runs on Windows.
 
 e.g.
 
@@ -73,7 +73,7 @@ RunTarget("Pack");
 
 _Make sure the `&version=` attribute references the latest versions of [ExcelDnaPack](https://www.nuget.org/packages/ExcelDnaPack/) and [Cake.ExcelDnaPack](https://www.nuget.org/packages/Cake.ExcelDnaPack/) available on nuget.org_.
 
-For more details on how `Cake.ExcelDnaPack` works, check its [documentation](https://github.com/augustoproiete/Cake.ExcelDnaPack).
+For more details on how `Cake.ExcelDnaPack` works, check its [documentation](https://github.com/cake-contrib/Cake.ExcelDnaPack).
 
 ## Release History
 
