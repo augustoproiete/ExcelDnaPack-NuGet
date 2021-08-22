@@ -12,14 +12,13 @@ var excelDnaPackageId = "ExcelDna.AddIn";
 var excelDnaPackageVersion = "1.1.1";
 var excelDnaCopyrightYear = 2020;
 
-var excelDnaPackageDirectoryPath = MakeAbsolute(new DirectoryPath($"./build/source/{excelDnaPackageId}.{excelDnaPackageVersion}"));
+var excelDnaPackageDirectoryPath = MakeAbsolute(new DirectoryPath($"./artifacts/source/{excelDnaPackageId}.{excelDnaPackageVersion}"));
 var excelDnaPackageFilePath = excelDnaPackageDirectoryPath.CombineWithFilePath($"{excelDnaPackageId}.{excelDnaPackageVersion}.nupkg");
 
 Task("clean")
     .Does(() =>
 {
-    CleanDirectory("./build/source");
-    CleanDirectory("./build/artifacts");
+    CleanDirectories("./artifacts/**");
 });
 
 Task("download-nupkg")
@@ -155,11 +154,11 @@ Task("pack")
     NuGetPack(nuspecDestFilePath.FullPath, new NuGetPackSettings
     {
         Version = buildVersion.PackageVersion,
-        OutputDirectory = "./build/artifacts",
+        OutputDirectory = "./artifacts/nuget",
     });
 });
 
-Task("publish")
+Task("push")
     .IsDependentOn("pack")
     .Does(context =>
 {
@@ -185,7 +184,7 @@ Task("publish")
         ApiKey = apiKey,
     };
 
-    foreach (var nugetPackageFile in GetFiles("./build/artifacts/*.nupkg"))
+    foreach (var nugetPackageFile in GetFiles("./artifacts/nuget/*.nupkg"))
     {
         DotNetCoreNuGetPush(nugetPackageFile.FullPath, nugetPushSettings);
     }
