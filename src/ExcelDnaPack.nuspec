@@ -33,7 +33,7 @@
         - SHA512 hash: `{ExcelDnaIntegrationDllSha512Hash}`
     </releaseNotes>
     <language>en-US</language>
-    <tags>excel-dna exceldnapack tool pack exceldna</tags>
+    <tags>excel-dna exceldnapack tool pack exceldna exceldna-tool exceldna-contrib augustoproiete augusto-proiete</tags>
   </metadata>
   <files>
     <file src=".\tools\ExcelDnaPack.exe" target="tools\" />

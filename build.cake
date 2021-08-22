@@ -9,8 +9,8 @@ var target       = ArgumentOrDefault<string>("target") ?? "pack";
 var buildVersion = MinVer(s => s.WithTagPrefix("v").WithDefaultPreReleasePhase("preview"));
 
 var excelDnaPackageId = "ExcelDna.AddIn";
-var excelDnaPackageVersion = "1.1.1";
-var excelDnaCopyrightYear = 2020;
+var excelDnaPackageVersion = "1.5.0-rc1";
+var excelDnaCopyrightYear = 2021;
 
 var excelDnaPackageDirectoryPath = MakeAbsolute(new DirectoryPath($"./artifacts/source/{excelDnaPackageId}.{excelDnaPackageVersion}"));
 var excelDnaPackageFilePath = excelDnaPackageDirectoryPath.CombineWithFilePath($"{excelDnaPackageId}.{excelDnaPackageVersion}.nupkg");
