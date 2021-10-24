@@ -59,7 +59,7 @@ Use the [Cake.ExcelDnaPack](https://github.com/cake-contrib/Cake.ExcelDnaPack/) 
 e.g.
 
 ```csharp
-#tool "nuget:?package=ExcelDnaPack&version=1.1.1"
+#tool "nuget:?package=ExcelDnaPack&version=1.5.0"
 #addin "nuget:?package=Cake.ExcelDnaPack&version=1.0.0"
 
 Task("Pack")
