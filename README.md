@@ -59,8 +59,8 @@ Use the [Cake.ExcelDnaPack](https://github.com/cake-contrib/Cake.ExcelDnaPack/) 
 e.g.
 
 ```csharp
-#tool "nuget:?package=ExcelDnaPack&version=1.5.0"
-#addin "nuget:?package=Cake.ExcelDnaPack&version=1.0.0"
+#tool "nuget:?package=ExcelDnaPack&version=1.5.1"
+#addin "nuget:?package=Cake.ExcelDnaPack&version=2.0.0"
 
 Task("Pack")
     .Does(context =>
