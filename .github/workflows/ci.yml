@@ -26,14 +26,12 @@ jobs:
       fail-fast: false
       matrix:
         job:
-          - os: ubuntu-20.04
+          - os: ubuntu-22.04
             build: ./build.sh
-          - os: windows-2019
-            build: ./build.cmd
-            push: true
           - os: windows-2022
             build: ./build.cmd
-          - os: macos-10.15
+            push: true
+          - os: macos-12
             build: ./build.sh
     name: ${{ matrix.job.os }}
     runs-on: ${{ matrix.job.os }}
