@@ -81,8 +81,8 @@ Click on the [Releases](https://github.com/augustoproiete/ExcelDnaPack-NuGet/rel
 
 ## License
 
-_Copyright &copy; 2021 Excel-DNA Contributors - Provided under the [Apache License, Version 2.0](LICENSE)._
+_Copyright &copy; 2022 Excel-DNA Contributors - Provided under the [Apache License, Version 2.0](LICENSE)._
 
 ---
 
-_The ExcelDnaPack tool is Copyright &copy; 2005-2021 Govert van Drimmelen - Provided under the [zLib license](https://opensource.org/licenses/Zlib). See file LICENSE.txt included in the NuGet package._
+_The ExcelDnaPack tool is Copyright &copy; 2005-2022 Govert van Drimmelen - Provided under the [zLib license](https://opensource.org/licenses/Zlib). See file LICENSE.txt included in the NuGet package._
